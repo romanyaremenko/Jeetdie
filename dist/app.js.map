@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/js/home.js", "../src/app.js"],
+  "sourcesContent": ["export const HomePage = () => {\n  if (document.querySelector('.home-page')) {\n    console.log('home page')\n  }\n}\n", "import { HomePage } from './js/home'\n\n// wait for document loaded\nwindow.addEventListener('load', function (event) {\n  HomePage()\n})\n"],
+  "mappings": "MAAO,GAAM,GAAW,IAAM,CAC5B,AAAI,SAAS,cAAc,eACzB,QAAQ,IAAI,cCChB,OAAO,iBAAiB,OAAQ,SAAU,EAAO,CAC/C",
+  "names": []
+}

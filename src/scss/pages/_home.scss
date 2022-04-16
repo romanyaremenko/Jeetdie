@@ -1,0 +1,165 @@
+header {
+  position: relative;
+  overflow: hidden;
+  height: 162px;
+  .header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url('../img/header80.svg') center center/cover no-repeat;
+    background-size: auto;
+    padding:  0 100px;
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-button {
+      width: 200px;
+      height: 40px;
+      text-align: center;
+      background: linear-gradient(270deg, rgba(51, 134, 120, 0.65) 0%, rgba(41, 193, 214, 0.065) 35.55%, rgba(41, 193, 214, 0.065) 61.81%, rgba(51, 134, 120, 0.65) 100%);
+      box-shadow: inset 0px 0px 16px rgba(73, 214, 171, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+//.header-blur {
+//  filter: blur(10px);
+//  //position: absolute;
+//  left: 0;
+//  right: 0;
+//  top: 0;
+//  bottom: 0;
+//  width: 100%;
+//  height: 162px;
+//}
+
+.hero {
+  //background: url('../../src/img/block_1/Background.png') no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &__bg {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 135px;
+    height: calc(100% - 135px);
+    background: linear-gradient(331.73deg, rgba(0, 0, 0, 0.1) -1.55%, #000000 115.15%);
+    box-shadow: 10px 0px 24px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    width: 355px;
+    padding: 45px 60px 0 45px;
+    /* Note: backdrop-filter has minimal browser support */
+    &-top {
+      h5 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: uppercase;
+        background: linear-gradient(0deg, #26A69A -31.82%, #B2F6FF 110.8%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        text-shadow: 0px 0px 5px rgba(38, 166, 154, 0.9), 0px 0px 10px rgba(38, 166, 154, 0.45);
+
+      }
+    }
+    &-link {
+      position: relative;
+      display: block;
+      margin-bottom: 10px;
+      .symbol {
+        width: 6px;
+        height: 6px;
+        background: radial-gradient(95.83% 95.83% at 37.5% 4.17%, #7DFFE0 0%, rgba(99, 255, 218, 0) 100%);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      p {
+        margin-left: 12px;
+        font-weight: 400;
+        font-size: 21px;
+        color: #FFFFFF;
+      }
+      &:hover {
+        .symbol {
+          width: 2px;
+          height: 40px;
+          background: linear-gradient(180deg, rgba(99, 255, 218, 0) 0%, #7DFFE0 45.74%, rgba(99, 255, 218, 0) 100%);
+          border-radius: 1px;
+        }
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+    &-bottom {
+      display: flex;
+      align-items: center;
+      &__item {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        position: relative;
+        z-index: 10;
+        margin-left: 13px;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          right: 0;
+          filter: blur(9px);
+          background: linear-gradient(180deg, rgba(178, 246, 255, 0) 0%, #26A69A 100%);
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
